@@ -1,0 +1,14 @@
+.join-container {
+    background-color: white;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.buttonEnter{
+    margin-left: 1em;
+    background-color: #0863ec;
+    color: white;
+}
