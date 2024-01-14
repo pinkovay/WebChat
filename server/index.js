@@ -24,7 +24,7 @@ io.on('connection', socket =>{ // Connection: That name's already reserved by th
     socket.on('message', text =>{ // event being received from the frontend ChatScript.jsx
          io.emit('receive_message', {
             text,
-            authorid: socket.id,
+            authorId: socket.id,
             author: socket.data.username
          }) // Now it is the server that is issuing, not the socket instance
     })

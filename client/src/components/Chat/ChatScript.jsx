@@ -60,6 +60,9 @@ export default function Chat({ socket }) {
         <div>
             <div className={style['chat-container']}>
                 <div className={style["chat-body"]}>
+                    {/* Precis entender como fazer a minha mensagem ter uma cor diferente. */}
+
+                    {/* ATUALIZAÇÃO: Descobri que o authorID n está chegando até o front-end */}
                     {
                         messageList.map((message, index) => (
                             <div className={`${style["message-container"]} ${message.authorId === socket.id && style["message-mine"]}`} key={index}>
@@ -68,7 +71,7 @@ export default function Chat({ socket }) {
                             </div>
                         ))
                     }
-                    <div ref={bottomRef} className='scroll'/>
+                    <div ref={bottomRef}/>
                 </div>
                 <div className={style["chat-footer"]}>
                     <input type="text" ref={messageRef} placeholder='Mensagem' className={style['inputText']} onKeyDown={(e)=>getEnterKey(e)} fullWidth />
