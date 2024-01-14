@@ -31,7 +31,7 @@ export default function Chat({ socket }) {
         if (!message.trim()) return // Checking if the message is empty
 
         socket.emit('message', message)
-        console.log('foi')
+
         clearInput()
         focusInput()
     }

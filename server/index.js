@@ -11,14 +11,18 @@ const PORT = 3001;
 
 // Receiving information whenever a user makes a connection through the frontend
 io.on('connection', socket =>{ // Connection: That name's already reserved by the lib, because's an event type
-    console.log('Usuário conectado!', socket.id) // each user will have a unique connection socket id
+
+    console.log('Usuário conectado!') // each user will have a unique connection socket id
+    console.log(`Your Id's: ${socket.id}`)
 
     socket.on('disconnect', reason =>{ // event being received from the frontend
         console.log('Usuário desconectado! ', socket.id)
+        console.log(reason)
     })
 
     socket.on('set_username', username =>{ // event being received from the frontend
         socket.data.username = username // stored the information // stored the usernam
+        console.log(`Your name's: ${username}\n`)
     })
 
     socket.on('message', text =>{ // event being received from the frontend ChatScript.jsx
