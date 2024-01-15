@@ -1,7 +1,23 @@
+/* AQUI ESTÁ DIRETAMENTE LIGADO A PERSONALIZAÇÃO DO APP EM GERAL */
+
 body{
   height: 100vh;
   background: linear-gradient(to right, #0863ec 0%, #173c83 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.UserName{
+  color: white;
+  font-size: 2em;
+}
+
+.boxUserName{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
